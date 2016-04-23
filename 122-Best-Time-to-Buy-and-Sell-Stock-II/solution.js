@@ -2,10 +2,11 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
-    var result = 0
-    var current = null
-    for(var i = 0; i < prices.length; i++){
+var maxProfit = function(prices){
+    "use strict"
+    let result = 0
+    let current = null
+    for(let i = 0; i < prices.length; i++){
         if(prices[i + 1] > prices[i] && current === null){
             // buy
             current = prices[i]
