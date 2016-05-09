@@ -25,7 +25,7 @@ var missingNumber = function(nums) {
 var missingNumber = function(nums) {
     "use strict";
     let len = nums.length
-    let wholeSum = (0 + len)*(len + 1) / 2
+    let wholeSum = (0 + len) * (len + 1) / 2
     let offset = wholeSum - nums.reduce(function(x, y){return x + y})
     return offset
 };
