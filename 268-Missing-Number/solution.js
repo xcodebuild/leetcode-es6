@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number}
  */
+/*
+ * Liner extra space complexity solution
 var missingNumber = function(nums) {
     "use strict";
     let table = []
@@ -16,4 +18,14 @@ var missingNumber = function(nums) {
         } 
     }
     return i
+};
+*/
+
+// Constant extra space complexity solution
+var missingNumber = function(nums) {
+    "use strict";
+    let len = nums.length
+    let wholeSum = (0 + len)*(len + 1) / 2
+    let offset = wholeSum - nums.reduce(function(x, y){return x + y})
+    return offset
 };
